@@ -473,6 +473,53 @@
   .callout.safe strong:first-child { color: var(--sage); }
   .callout p:last-child { margin-bottom: 0; }
 
+  /* ==================== FIGURES ==================== */
+  .figure {
+    margin: 28px auto;
+    background: var(--surface-clean);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    max-width: 760px;
+  }
+  .figure.figure-narrow { max-width: 560px; }
+  .figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: var(--bg-deep);
+  }
+  .figure figcaption {
+    padding: 14px 20px 16px;
+    border-top: 1px solid var(--line-soft);
+    background: var(--surface);
+  }
+  .figure figcaption .cap {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  .figure figcaption .credit {
+    display: block;
+    margin-top: 6px;
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: var(--ink-faint);
+  }
+  .figure figcaption .credit a {
+    color: var(--coral-deep);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--coral-soft);
+  }
+  .figure figcaption .credit a:hover { border-bottom-color: var(--coral); }
+  @media print {
+    .figure { box-shadow: none; break-inside: avoid; }
+  }
+
   /* ==================== TABLES ==================== */
   .tbl-wrap {
     overflow-x: auto;
@@ -1031,6 +1078,15 @@
   <div class="eyebrow">Module Builder's Guide · v1.0</div>
   <h1>Reachy Mini WiFi as a <em>cybersecurity teaching surface.</em></h1>
   <p class="lede">A practical onboarding guide for graduate-student instructional designers who want to build hands-on cybersecurity exercises around a small, visible, networked robot — without needing a formal infosec background.</p>
+
+  <figure class="figure">
+    <img src="assets/img/reachy-mini-hero.png" alt="Reachy Mini, a small open-source desktop humanoid robot from Pollen Robotics and Hugging Face, shown with its expressive head and antennas." loading="lazy">
+    <figcaption>
+      <span class="cap">Reachy Mini — 28&nbsp;cm tall, ~1.5&nbsp;kg, 6-DOF head, wide-angle camera, two-to-four microphones. Small enough to sit on a desk; networked enough to teach an entire attack surface.</span>
+      <span class="credit">Image: Pollen Robotics × Hugging Face. Source: <a href="https://huggingface.co/blog/reachy-mini">huggingface.co/blog/reachy-mini</a>.</span>
+    </figcaption>
+  </figure>
+
   <div class="hero-meta">
     <div class="hero-meta-item">
       <span class="lbl">Audience</span>
@@ -1105,6 +1161,13 @@
     <h2 class="ch-title">What one Reachy Mini can teach</h2>
   </div>
   <div class="ch-body">
+    <figure class="figure">
+      <img src="assets/img/reachy-mini-features.png" alt="Reachy Mini hardware and feature overview: head with camera, antennas, microphones, speakers, and base motors." loading="lazy">
+      <figcaption>
+        <span class="cap">The teachable surfaces of one device — camera, microphones, speakers, antennas, head and body motors, Wi-Fi radio, USB-C link, and the Python SDK that talks to all of them.</span>
+        <span class="credit">Image: Pollen Robotics × Hugging Face. Source: <a href="https://huggingface.co/blog/reachy-mini">huggingface.co/blog/reachy-mini</a>.</span>
+      </figcaption>
+    </figure>
     <p>A single device, with no add-ons, lets you author exercises across most of the security curriculum that an ed-tech or AI-ethics course would ever assign. The matrix below maps the device's surfaces to teachable topics.</p>
     <div class="tbl-wrap">
     <table>
@@ -1756,6 +1819,13 @@
     <h2 class="ch-title">Tentative ideas <em>— beyond cybersecurity</em></h2>
   </div>
   <div class="ch-body">
+    <figure class="figure">
+      <img src="assets/img/reachy-mini-hello.gif" alt="Reachy Mini saying hello — head turning, antennas wiggling, expressive desktop motion." loading="lazy">
+      <figcaption>
+        <span class="cap">The same head, gaze, and antennas that make a cybersecurity surface legible also make this robot a credible <em>embodied</em> partner for tutoring, counseling practice, and joint attention. The directions below sketch where that affordance leads next.</span>
+        <span class="credit">Animation: Pollen Robotics. Source: <a href="https://github.com/pollen-robotics/reachy_mini">github.com/pollen-robotics/reachy_mini</a>.</span>
+      </figcaption>
+    </figure>
     <p>Cybersecurity is the current entry point because the attack surface of a small networked robot is unusually legible to learners. But Reachy Mini's actual affordances — a 6-DOF head, a wide-angle camera, two-to-four microphones, and a Python SDK with WebRTC streaming — generalize well past infosec. The directions below are <strong>tentative</strong>: none are built yet in this repo, all are scoped to keep ECD telemetry, IRB gating, and the 90-minute worksheet pattern intact. Treat them as candidates for the next module pair, not commitments.</p>
 
     <h3>Direction 1 <em>— Embodied tutoring agent</em></h3>
