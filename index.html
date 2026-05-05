@@ -1015,6 +1015,7 @@
     <li><a href="#worksheet">Build a module in 90 minutes</a></li>
     <li><a href="#anchor">Anchoring to your stack</a></li>
     <li><a href="#faq">FAQ</a></li>
+    <li><a href="#tentative">Tentative ideas — beyond cybersecurity</a></li>
     <li><a href="#downloads">Downloads</a></li>
     <li><a href="#refs">References</a></li>
   </ol>
@@ -1749,9 +1750,50 @@
 </section>
 
 <!-- ==================== 13 ==================== -->
-<section class="chapter" id="downloads">
+<section class="chapter" id="tentative">
   <div class="ch-header">
     <div class="ch-num">13</div>
+    <h2 class="ch-title">Tentative ideas <em>— beyond cybersecurity</em></h2>
+  </div>
+  <div class="ch-body">
+    <p>Cybersecurity is the current entry point because the attack surface of a small networked robot is unusually legible to learners. But Reachy Mini's actual affordances — a 6-DOF head, a wide-angle camera, two-to-four microphones, and a Python SDK with WebRTC streaming — generalize well past infosec. The directions below are <strong>tentative</strong>: none are built yet in this repo, all are scoped to keep ECD telemetry, IRB gating, and the 90-minute worksheet pattern intact. Treat them as candidates for the next module pair, not commitments.</p>
+
+    <h3>Direction 1 <em>— Embodied tutoring agent</em></h3>
+    <p>Replace the screen-bound chat surface of an LLM tutor (e.g., ALGET's BigAL, the AIeL five-mode tutor) with a physical desktop tutor whose head, gaze, and backchannel nods are driven by the same model. Compare engagement, recall, and help-seeking behavior across screen vs. embodied conditions while holding the underlying prompt constant. The within-subjects design is clean because the model output is identical — only the embodiment channel differs. Plausible venues: <em>Computers &amp; Education</em>, <em>BJET</em>, <em>ETR&amp;D</em>.</p>
+
+    <h3>Direction 2 <em>— Counseling skill simulation</em></h3>
+    <p>Extend the Counseling Graph CSCL knowledge-graph tool with an embodied "client" surface. Trainees practice reflective listening, open questions, and silence with a Reachy Mini whose head movement carries the non-verbal cues (gaze aversion, slow nod, head tilt) that screen-only roleplay loses. The robot's prompts are curated by the supervising clinician; the trainee's behavior is logged for ENA-style coding. Venues: <em>JLS</em>, <em>Learning and Instruction</em>, counseling-education journals.</p>
+
+    <h3>Direction 3 <em>— Pre-service teacher × child agent</em></h3>
+    <p>Repurpose the head and voice as a "child agent" in early-childhood teacher preparation, paralleling the EarlyTeacherEd VR work. The trainee facilitates a play-based task; the Mini's head turns toward or away from the activity to model joint attention or distraction. The same Whisper transcripts and TNA/ENA pipelines from the VR study apply, which keeps the analytic stack one project, not two. Venues: <em>Teaching and Teacher Education</em>, <em>Early Childhood Research Quarterly</em>.</p>
+
+    <h3>Direction 4 <em>— Joint attention &amp; gaze-contingent feedback</em></h3>
+    <p>Use the camera to estimate where the learner is looking on a screen, then move the robot head to the same target. Test whether visible joint attention from a non-human partner shifts learner persistence, help-seeking, or self-explanation. This is the cleanest single-construct study on this list and the easiest to power-analyze; the Behaviormetrika immersive-state work positions cleanly as upstream context, not duplicate framing. Venues: <em>JLS</em>, <em>JLA</em>, <em>L@S</em>.</p>
+
+    <h3>Direction 5 <em>— Multimodal VLM agent</em></h3>
+    <p>Route the camera feed into an open-source vision-language model (e.g., Llama 3.2-Vision, Qwen2.5-VL via Hugging Face) and let the robot describe, ground, or react to the physical scene in front of it. The pedagogical artifact is a single look-talk-nod loop that demystifies how a VLM "sees." This is the lowest-cost demo to build because the SDK already exposes RGB frames as numpy arrays. Venues: <em>Computers &amp; Education: Artificial Intelligence</em>, <em>X Reality</em>.</p>
+
+    <h3>Direction 6 <em>— Robot-mediated learning-analytics feedback</em></h3>
+    <p>Take a dashboard from DataSandbox or any LA tool the cohort already uses and replace the on-screen alert with a robot turn — head toward the chart, voice cue, antenna gesture. Test whether physical co-presence of feedback changes learner attention and follow-through compared to a notification. Naturally fits an EHRD 689 or HCD-instrumented LA course as a single-session activity. Venues: <em>JLA</em>, <em>LAK</em>.</p>
+
+    <h3>Direction 7 <em>— Quest 3 head-tracking telepresence (look-around only)</em></h3>
+    <p>Reachy Mini has no arms, so the Reachy 2 Unity teleoperation app does not transfer. A reduced WebXR client — Quest 3 head pose streamed over WebSocket to the Python SDK, robot camera streamed back as H.264 over WebRTC — gives a "head-only" telepresence puck. Useful for remote office hours, lab walk-throughs, or as a research apparatus to study how a physical surrogate (vs. a Zoom tile) changes co-presence. Mono camera means this is "VR window" not stereo telepresence; scope honestly. Venues: <em>CHI</em>, <em>CSCW</em>, <em>X Reality</em>.</p>
+
+    <div class="callout">
+      <strong>How to choose</strong>
+      Directions 1, 4, and 5 are the cheapest to prototype because they reuse infrastructure that already exists in the Educatian stack (LLM proxy, ECD telemetry, vision model endpoints). Directions 2 and 3 carry the highest research yield because they connect to active human-subjects work (Counseling Graph curation, EarlyTeacherEd Whisper/ENA pipeline). Direction 7 is a feasibility study, not a study; build it only if a downstream RQ depends on it.
+    </div>
+    <div class="callout">
+      <strong>What stays the same</strong>
+      Whichever direction is built next, the structural commitments of this guide carry over: an isolated lab WiFi, an IRB gate, an ECD evidence rubric, a debrief script, and a 90-minute author worksheet. New directions should slot into those scaffolds, not replace them.
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 14 ==================== -->
+<section class="chapter" id="downloads">
+  <div class="ch-header">
+    <div class="ch-num">14</div>
     <h2 class="ch-title">Downloads</h2>
   </div>
   <div class="ch-body">
@@ -1845,10 +1887,10 @@
   </div>
 </section>
 
-<!-- ==================== 14 ==================== -->
+<!-- ==================== 15 ==================== -->
 <section class="chapter" id="refs">
   <div class="ch-header">
-    <div class="ch-num">14</div>
+    <div class="ch-num">15</div>
     <h2 class="ch-title">References</h2>
   </div>
   <div class="ch-body">

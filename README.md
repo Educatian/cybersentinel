@@ -27,6 +27,8 @@ A self-contained HTML guidebook (`index.html`) plus 13 editable Markdown templat
 | `templates/T6_capstone_redblue.md` | Red vs blue capstone (Advanced, 1 week) |
 | `templates/T7_defensive_engineering.md` | Defensive engineering capstone (Advanced, 2 weeks) |
 
+The guide also carries a **§13 Tentative ideas — beyond cybersecurity** section sketching seven non-infosec directions where the same Reachy Mini hardware and the ECD/IRB scaffolding here would transfer (embodied tutoring, counseling skill simulation, pre-service teacher × child agent, joint attention, multimodal VLM, robot-mediated LA feedback, Quest 3 head-tracking telepresence). Treat them as candidates for the next module pair, not commitments.
+
 ## Who this is for
 
 Graduate TAs and co-instructors with intermediate Python and basic networking. Embedded in education, learning-sciences, instructional-design, or AI-ethics courses — not CS security courses. The guide carries the structural and assessment work so the author can focus on pedagogy and course context.
