@@ -1,4 +1,6 @@
-# CyberSentinel
+# Cyber SENTINEL
+
+**Security Evidence and Networked Threat Inquiry for Next-generation Educators' Learning**
 
 > **Reachy Mini WiFi as a cybersecurity teaching surface.**
 > A practical onboarding guide for graduate-student instructional designers who want to build hands-on cybersecurity exercises around a small, visible, networked robot — without needing a formal infosec background.
